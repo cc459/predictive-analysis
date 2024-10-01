@@ -32,7 +32,9 @@ $ python3 -m venv venv
 ```
 
 For Windows:
+```
 $ python -m venv venv
+```
 
 #### 4. Activate the virtual environment
 For Mac/Linux:
