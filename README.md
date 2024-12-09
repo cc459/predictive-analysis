@@ -1,4 +1,29 @@
 # Predictive Analysis
+# File functions
+## Modeling 
+### combined_workflow.ipynb
+This is the combined workflow for web scraping, performing sentiment analysis, and saving this all to a .csv file and the MongoDB database. When collecting data, we ran this file every day. This has not been automated.
+### logistic_regression.ipynb
+This performs and evaluates logistic regression on the stock data based on the sentiment analysis values obtained from web-scraped current news articles. 
+### lstm.ipynb
+This performs long short-term memory modeling with neural networks to predict stock market changes—increase or decrease—based on historical financial data and sentiment analysis on current news articles.
+### autoregressive_model.ipynb
+This performs simple autoregressive prediction on the stock data based on the sentiment analysis data and prediction values from the previous two days. It is important to note that the model performance was significantly affected by data sparsity, as it is highly dependent on past data to make future predictions.
+
+## Supplementals to modeling pipeline
+### Converting_dates.ipynb
+For modeling and data manipulation, sometimes it is better to use the datetime object for efficiency instead of the date as a string. This file allows for these conversions, if necessary.
+### Plots.ipynb
+This file produces plots of the distribution of stocks across the sectors. It also allows us to make plots of sentiment vs. price of stock for a chosen stock
+
+## Data collection
+### yahoo_finance_news_scraper.ipynb
+This file builds a web scraper that—given an article title and URL from the Yahoo Finance API—accesses, scrapes, and stores the corresponding article text as a list of strings
+### yahoo_finance_news_updating.ipynb
+Based on the web scraper implemented in yahoo_finance_news_scraper.ipynb, this file stores the scraped article text in a pandas dataframe and uploads the data into our MongoDB database for storage and future reference.
+### Stock_data.csv
+This is a local copy of the stock data used to train models, so we don’t have to pull from the database every time.
+
 ## Getting Started
 
 Follow these steps to set up the project on your local machine.
