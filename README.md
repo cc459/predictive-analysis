@@ -92,5 +92,5 @@ $ pip freeze > requirements.txt
 ```
 This ensures that anyone else working on the project will have access to the updated dependencies.
 
-*If you are facing issues running the code, specifically ModuleNotFoundErrors, simply download the module indicated that isn't install using the command "pip install <module_name>" in terminal. 
+*If you are facing issues running the code, specifically ModuleNotFoundErrors, simply download the module indicated that isn't installed using the command "pip install <module_name>" in terminal. 
 
